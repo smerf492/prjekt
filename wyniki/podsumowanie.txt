@@ -1,0 +1,9 @@
+Ze zwykłych modeli najlepiej wypadł random forest, skalowanie miało dla niego pomijalne znaczenie,
+kolejność pozostałych modeli zależy od obranej metryki, dobre wyniki miały:
+lasso, linear oraz SVC z jądrem "poly", skalowanie najbardziej wpłynęło na lasso (poprawa).
+Ridge zdaje się gubić na danych testowych.
+
+Dla modeli neuronowych standaryzacja danych znacznie poprawia wyniki, natomiast dropout zdaje się nie mieć
+istotnego wpływu w testowanym zakresie. Sieci większe niż te na wykresach na ogół dawały gorsze wyniki po
+zbliżonej ilości epok, stąd wniosek, że użyta jest wystarczająca.
+early_stoping dla patience=30 zadziałał odpowiednio po 166, 137, 202 epokach.
